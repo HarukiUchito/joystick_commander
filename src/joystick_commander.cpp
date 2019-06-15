@@ -80,7 +80,7 @@ int main(int argc, char **argv) {
     ros::NodeHandle node;
     ros::NodeHandle private_node_handle("~");
     std::string pub_name;
-    private_node_handle.param<std::string>("pub_name", pub_name, "cmd_vel");
+    private_node_handle.param<std::string>("pub_name", pub_name, "/ypspur_ros/cmd_vel");
 
     ros::Publisher cmd_publisher = node.advertise<geometry_msgs::Twist>(pub_name, 100);
 
